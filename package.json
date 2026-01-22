@@ -1,0 +1,101 @@
+{
+  "name": "@strapix/strapi-plugin-alt-text-generator-v4",
+  "version": "1.0.0",
+  "description": "Automatically generates AI-powered alt text for images in the Strapi v4 Media Library to improve accessibility and content quality.",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "alt-text",
+    "accessibility",
+    "ai"
+  ],
+  "strapi": {
+    "name": "Alternative Text Generator",
+    "description": "Automatically generates AI-powered alt text for images in the Strapi Media Library to improve accessibility and content quality.",
+    "kind": "plugin"
+  },
+  "exports": {
+    "./strapi-admin": {
+      "source": "./admin/src/index.tsx",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "source": "./server/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^1.6.3",
+    "@strapi/helper-plugin": "^4.6.0",
+    "@strapi/icons": "^1.6.3",
+    "prop-types": "^15.7.2",
+    "react-intl": "^7.1.14"
+  },
+  "devDependencies": {
+    "@strapi/pack-up": "^5.1.1",
+    "@strapi/typescript-utils": "^4.6.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.28",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "sharp": "^0.33.5",
+    "styled-components": "^5.3.6",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.25.0",
+    "@strapi/design-system": "^1.6.3",
+    "@strapi/helper-plugin": "^4.6.0",
+    "@strapi/icons": "^1.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "sharp": ">=0.33.0",
+    "styled-components": "^5.3.6",
+    "typescript": "5.0.4"
+  },
+  "overrides": {
+    "react-intl": {
+      "typescript": "5.0.4"
+    },
+    "@formatjs/intl": {
+      "typescript": "5.0.4"
+    }
+  },
+  "author": {
+    "name": "holzmichel41 <47560723+Holzmichel41@users.noreply.github.com>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Holzmichel41/strapi-plugin-alt-text-generator-v4"
+  },
+  "maintainers": [
+    {
+      "name": "holzmichel41 <47560723+Holzmichel41@users.noreply.github.com>"
+    }
+  ],
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "develop": "tsc -p tsconfig.server.json -w",
+    "build": "pack-up build",
+    "watch": "pack-up watch",
+    "check": "pack-up check"
+  },
+  "files": [
+    "dist",
+    "strapi-admin.js",
+    "strapi-server.js"
+  ],
+  "license": "MIT"
+}
