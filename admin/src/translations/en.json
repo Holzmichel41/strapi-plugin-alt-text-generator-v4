@@ -14,6 +14,7 @@
   "settings.licenseKey.edit": "Edit License Key",
   "settings.licenseKey.cancel": "Cancel",
   "settings.licenseKey.howToGet": "Get your license key from your dashboard",
+  "settings.feedback": "Give feedback (60s)",
   "settings.licenseKey.save.success": "License key saved successfully",
   "settings.licenseKey.save.error": "Failed to save license key. Please check if it's valid.",
   "settings.licenseKey.delete.success": "License key removed successfully",

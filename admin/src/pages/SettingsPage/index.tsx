@@ -427,6 +427,26 @@ const SettingsPage = () => {
                     </Typography>
                     <ExternalLink width={12} height={12} fill="#4945ff" />
                   </Box>
+
+                  <Box
+                    as="a"
+                    href="https://form.typeform.com/to/PysBr5yy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      textDecoration: "none",
+                      marginTop: "8px",
+                    }}
+                  >
+                    <Typography variant="pi" textColor="primary600">
+                      {formatMessage({ id: getTranslation("settings.feedback") })}
+                    </Typography>
+                    <ExternalLink width={12} height={12} fill="#4945ff" />
+                  </Box>
+
                 </>
               )}
             </Flex>
